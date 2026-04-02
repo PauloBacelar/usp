@@ -1,0 +1,26 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Debug EP1",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/EP1",
+            "args": ["4", "3", "4", "arquivo.txt"],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}",
+            "environment": [],
+            "externalConsole": false,  // or true if you want a terminal window
+            "MIMode": "gdb",
+            "setupCommands": [
+                {
+                    "description": "Enable pretty-printing for gdb",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                }
+            ],
+            "preLaunchTask": "build EP1", // optional, only if you have tasks.json
+            "miDebuggerPath": "/usr/bin/gdb"
+        }
+    ]
+}
